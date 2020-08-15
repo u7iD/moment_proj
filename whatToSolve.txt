@@ -1,0 +1,19 @@
+event.date_time 
+    in db "2020-09-01 06:00:00-07", Type timestamp with time zone in psql
+    event.date_time: "2020-09-01T13:00:00.000Z"	
+    typeof event.date_time: string
+    returned by formatDate(date) "September 1, 2020 6:00 AM PDT"
+
+2020-09-01T13:00:00.000Z
+string
+September 1, 2020 6:00 AM PDT
+
+****formatDate.js
+import moment from "moment-timezone";
+
+function formatDate(date) {
+  console.log({ date });
+  return moment.tz(date, moment.tz.guess()).format("LLL z");
+}
+
+export default formatDate;
