@@ -43,21 +43,21 @@
     <!-- <meta name="description" content="hello world!" /> -->
     <script type="text/javascript">
       document.write(
-        `<meta name="description" content=` +
-          moment("2020-09-01T13:00:00.000Z").format() +
-          ">"
+        `<meta name="description" content="` +
+          moment("2020-09-01T13:00:00.000Z").format("LLL z") +
+          `"/>`
       );
     </script>
     <meta property="og:type" content="website" />
     <script type="text/javascript">
       document.write(
-        `<meta property="description" content=` +
-          moment("2020-09-01T13:00:00.000Z").format() +
-          ">" +
+        `<meta property="description" content="` +
+          moment("2020-09-01T13:00:00.000Z").format("LLL z") +
+          `"/>` +
           `\n` +
-          `<meta property="og:description" content=` +
-          moment("2020-09-01T13:00:00.000Z").format() +
-          ">"
+          `<meta property="og:description" content="` +
+          moment("2020-09-01T13:00:00.000Z").format("LLL z") +
+          `"/>`
       );
     </script>
     <meta property="og:title" content="Title" />
