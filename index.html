@@ -25,7 +25,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="description" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
@@ -48,11 +47,11 @@
         console.log(moment.tz(dateVal, moment.tz.guess()).format("LLL z"));
         console.log(moment(dateVal).format("LLL z"));
         console.log(moment(dateVal).format());
-        //   document.getElementById("h1").innerHTML = val;
-        const metaDescription = document.querySelector(
-          'meta[property="description"]'
-        );
-        metaDescription.content = moment(dateVal).format("LLL z");
+        const headEle = document.getElementsByTagName("head")[0];
+        const metaElement = document.createElement("meta");
+        metaElement.property = "description";
+        metaElement.content = moment(dateVal).format("LLL z");
+        headEle.appendChild(metaElement);
       };
     </script>
   </head>
