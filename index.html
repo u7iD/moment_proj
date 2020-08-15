@@ -43,15 +43,17 @@
       crossorigin="anonymous"
     ></script> -->
     <script>
-      const dateVal = "2020-09-01T13:00:00.000Z";
-      console.log(moment.tz(dateVal, moment.tz.guess()).format("LLL z"));
-      console.log(moment(dateVal).format("LLL z"));
-      console.log(moment(dateVal).format());
-      //   document.getElementById("h1").innerHTML = val;
-      const metaDescription = document.querySelector(
-        'meta[property="description"]'
-      );
-      metaDescription.content = moment(dateVal).format("LLL z");
+      window.onload = () => {
+        dateVal = "2020-09-01T13:00:00.000Z";
+        console.log(moment.tz(dateVal, moment.tz.guess()).format("LLL z"));
+        console.log(moment(dateVal).format("LLL z"));
+        console.log(moment(dateVal).format());
+        //   document.getElementById("h1").innerHTML = val;
+        const metaDescription = document.querySelector(
+          'meta[property="description"]'
+        );
+        metaDescription.content = moment(dateVal).format("LLL z");
+      };
     </script>
   </head>
   <body>
