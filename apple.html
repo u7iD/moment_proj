@@ -46,9 +46,11 @@
       document.write(
         `<meta property="description" content=` +
           moment("2020-09-01T13:00:00.000Z").format() +
-          `/>``<meta property="og:description" content=` +
+          ">" +
+          `\n` +
+          `<meta property="og:description" content=` +
           moment("2020-09-01T13:00:00.000Z").format() +
-          `/>`
+          ">"
       );
     </script>
     <meta property="og:title" content="Title" />
@@ -56,7 +58,6 @@
       property="og:url"
       content="https://u7id.github.io/moment_proj/index.html"
     />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
   <body>
     <h1>Timezone in meta</h1>
