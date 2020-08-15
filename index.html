@@ -55,8 +55,9 @@
         console.log(moment(dateVal).format());
         const headEle = document.getElementsByTagName("head")[0];
         const metaElement = document.createElement("meta");
-        metaElement.property = "og:description";
+        metaElement.setAttribute("property", "og:description");
         metaElement.content = moment(dateVal).format("LLL z");
+        console.log(metaElement);
         headEle.appendChild(metaElement);
       };
     </script>
