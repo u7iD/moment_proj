@@ -25,6 +25,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Title" />
+    <meta
+      property="og:url"
+      content="https://u7id.github.io/moment_proj/index.html"
+    />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
@@ -49,7 +55,7 @@
         console.log(moment(dateVal).format());
         const headEle = document.getElementsByTagName("head")[0];
         const metaElement = document.createElement("meta");
-        metaElement.property = "description";
+        metaElement.property = "og:description";
         metaElement.content = moment(dateVal).format("LLL z");
         headEle.appendChild(metaElement);
       };
