@@ -26,6 +26,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:type" content="website" />
+    <meta property="description" />
     <meta property="og:title" content="Title" />
     <meta
       property="og:url"
@@ -54,6 +55,12 @@
         console.log(moment(dateVal).format("LLL z"));
         console.log(moment(dateVal).format());
         const headEle = document.getElementsByTagName("head")[0];
+
+        const metaElement2 = document.querySelector(
+          "meta[property='description']"
+        );
+        metaElement2.content = moment(dateVal).format("LLL z");
+
         const metaElement = document.createElement("meta");
         metaElement.setAttribute("property", "og:description");
         metaElement.content = moment(dateVal).format("LLL z");
