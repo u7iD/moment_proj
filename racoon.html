@@ -1,0 +1,75 @@
+<!-- <Helmet>
+  <title>{event.name}</title>
+  <meta property="og:type" content="website" />
+  <meta
+    property="description"
+    content={event.date_time + "\t" + formatDate(event.date_time)}
+  />
+  <meta property="og:description" content={event.description} />
+  <meta property="og:title" content={event.name} />
+  <meta property="og:url" content={window.location.href} />
+  <meta property="og:image" content={event.photo_url} />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="Livestack" />
+  <meta name="twitter:title" content={event.name} />
+  <meta name="twitter:description" content={event.description} />
+  <meta name="twitter:image" content={event.photo_url} />
+</Helmet> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+      integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone.min.js"
+      integrity="sha512-GqWOXT1UPIvzojfXEPf2ByPu4S0iwX0SfFfZ985fePNpTJPuiWKn47mXd0iyfcpcjcmM/HIRtvrd5TsR87A0Zg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone-with-data.min.js"
+      integrity="sha512-HZcf3uHWA+Y2P5KNv+F/xa87/flKVP92kUTe/KXjU8URPshczF1Dx+cL5bw0VBGhmqWAK0UbhcqxBbyiNtAnWQ=="
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <meta name="description" content="September 1, 2020 6:00 AM PDT" /> -->
+    <!-- <meta name="description" content="hello world!" /> -->
+    <!-- <script type="text/javascript">
+      document.write(
+        `<meta name="description" content="` +
+          moment
+            .tz("2020-10-01T13:00:00.000Z", moment.tz.guess())
+            .format("LLL z") +
+          `"/>`
+      );
+    </script> -->
+    <meta property="og:type" content="website" />
+    <script type="text/javascript">
+      document.write(
+        `<meta property="og:description" content="` +
+          moment
+            .tz("2020-09-01T13:00:00.000Z", moment.tz.guess())
+            .format("LLL z") +
+          `"/>`
+      );
+    </script>
+    <!-- <meta property="description" content="2 September 1, 2020 6:00 AM PDT" /> -->
+    <!-- <meta property="og:description" content="3 September 1, 2020 6:00 AM PDT" /> -->
+    <meta property="og:title" content="Title" />
+    <meta
+      property="og:url"
+      content="https://u7id.github.io/moment_proj/giraffe.html"
+    />
+  </head>
+  <body>
+    <h1>Timezone in meta</h1>
+  </body>
+</html>
