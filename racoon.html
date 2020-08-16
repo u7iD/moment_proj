@@ -52,15 +52,7 @@
       );
     </script> -->
     <meta property="og:type" content="website" />
-    <script type="text/javascript">
-      document.write(
-        `<meta property="og:description" content="` +
-          moment
-            .tz("2020-09-01T13:00:00.000Z", moment.tz.guess())
-            .format("LLL z") +
-          `"/>`
-      );
-    </script>
+
     <!-- <meta property="description" content="2 September 1, 2020 6:00 AM PDT" /> -->
     <!-- <meta property="og:description" content="3 September 1, 2020 6:00 AM PDT" /> -->
     <meta property="og:title" content="Title" />
@@ -71,5 +63,15 @@
   </head>
   <body>
     <h1>Timezone in meta</h1>
+    <script type="text/javascript">
+      window.onload = () => {
+        const metaEle = document.createElement("meta");
+        metaEle.setAttribute("property", "og:description");
+        metaEle.content = moment
+          .tz("1920-09-01T13:00:00.000Z", moment.tz.guess())
+          .format("LLL z");
+        document.querySelector("head").appendChild(metaEle);
+      };
+    </script>
   </body>
 </html>
